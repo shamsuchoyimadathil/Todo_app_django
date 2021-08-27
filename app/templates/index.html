@@ -1,0 +1,18 @@
+{% extends 'base.html' %} 
+{% load static %}
+
+{% comment %} title {% endcomment %}
+{% block title %} ToDo App {% endblock title %}
+
+{% comment %} css {% endcomment %}
+{% block css %}{% static 'css/index.css' %}{% endblock css %}
+
+{% comment %} Main body {% endcomment %}
+{% block content %}
+
+    <h1>To Do</h1>
+
+{% endblock content %} 
+
+{% comment %} javascript {% endcomment %}
+{% block js %}{% static 'js/index.js' %}{% endblock js %}
