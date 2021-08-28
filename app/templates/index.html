@@ -9,6 +9,9 @@
 
 {% comment %} Main body {% endcomment %}
 {% block content %}
+
+    <div class="dateandtime">{{dateandtime}}</div>
+
     <form action="" method="POST">
         {% csrf_token %}
         <div id='myDIV' class='header'>

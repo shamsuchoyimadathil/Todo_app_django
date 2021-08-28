@@ -7,5 +7,5 @@ class MainForm(forms.ModelForm):
         model = models.Main
         fields = "__all__"
         widgets = {
-            'title':forms.TextInput(attrs={'placeholder':'your task...'})
+            'title':forms.TextInput(attrs={'placeholder':'write your task...'})
         }

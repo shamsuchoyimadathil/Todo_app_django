@@ -124,6 +124,12 @@ body {
     color: white ;
   } 
 
-  .container{
-    max-width: 300px;
+  
+  .dateandtime{
+    border: 1px solid black;
+    width: 155px;
+    margin:20px 0px 0 20px;
+    background-color:#bea05f ;
+    padding: 12px;
+    font-weight: 700;
   }
