@@ -9,14 +9,23 @@
 
 {% comment %} Main body {% endcomment %}
 {% block content %}
-
-    <h1>To Do</h1>
-
     <form action="" method="POST">
         {% csrf_token %}
-        {{form.as_p}}
-    <button type="submit">Add task</button>
-    </form>
+        <div id='myDIV' class='header'>
+            <h2 style="margin:5px">To Do List</h2>
+            <div>{{form.title}}</div>
+            <button type="submit" class="addBtn">Add task</button>
+        </div> 
+
+    </form>  
+{% comment %} {% url 'delete' a.pk %} {% endcomment %}
+    <ul id="myUL">
+        {% for a in alltasks %}
+            <li>{{a}} <a href="{% url 'delete' a.pk %}"> <i class="fa fa-times close"></i> </a> </li>
+        {% endfor %}
+    </ul>
+
+ 
 
 {% endblock content %} 
 
