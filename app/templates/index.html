@@ -9,9 +9,11 @@
 
 {% comment %} Main body {% endcomment %}
 {% block content %}
-
+    
+    {% comment %} date and time {% endcomment %}
     <div class="dateandtime">{{dateandtime}}</div>
 
+    {% comment %} add Task {% endcomment %}
     <form action="" method="POST">
         {% csrf_token %}
         <div id='myDIV' class='header'>
@@ -21,14 +23,13 @@
         </div> 
 
     </form>  
-{% comment %} {% url 'delete' a.pk %} {% endcomment %}
+
+    {% comment %} show tasks and delete task {% endcomment %}
     <ul id="myUL">
         {% for a in alltasks %}
             <li>{{a}} <a href="{% url 'delete' a.pk %}"> <i class="fa fa-times close"></i> </a> </li>
         {% endfor %}
     </ul>
-
- 
 
 {% endblock content %} 
 

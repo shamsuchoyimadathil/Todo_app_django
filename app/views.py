@@ -12,7 +12,8 @@ def index(request):
     form = forms.MainForm(request.POST)
     alltasks = models.Main.objects.all()
     dateandtime = datetime.datetime.now()
-
+    
+    # if form valid data stored in db else showing the same form 
     if form.is_valid():
         cleaned_data = form.cleaned_data
         data = models.Main(title = cleaned_data['title'])
@@ -21,6 +22,7 @@ def index(request):
     else:
         form = forms.MainForm()
     
+    #variables assigned in context 
     context['form'] = form 
     context['alltasks'] = alltasks 
     context['dateandtime'] = dateandtime

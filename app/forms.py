@@ -1,5 +1,4 @@
 from django import forms
-from django.forms import widgets
 from . import models
 
 class MainForm(forms.ModelForm):
