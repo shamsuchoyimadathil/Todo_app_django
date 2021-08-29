@@ -132,4 +132,13 @@ body {
     background-color:#bea05f ;
     padding: 12px;
     font-weight: 700;
+  } 
+
+  @media screen and (max-width: 450px) {
+    .addBtn{
+      font-size: 14px;
+      font-weight: 400;
+    }
+   
   }
+  
